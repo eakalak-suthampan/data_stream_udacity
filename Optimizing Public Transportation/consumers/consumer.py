@@ -98,15 +98,6 @@ class KafkaConsumer:
         #
         #logger.info("_consume is incomplete - skipping")
         
-#         message = self.consumer.poll(1.0)
-#         if message is None:
-#             logger.info("no message received by consumer")
-#             return 0
-#         elif message.error() is not None:
-#             print(f"error from consumer {message.error()}")
-#             return 0
-#         self.message_handler(message)
-
         returncode=0
         try:
             msg = self.consumer.poll(1)
